@@ -181,7 +181,7 @@ automatically-unhide-macos-hidden-apps = false
 # Setup Window Detected Callbacks
 # See: https://nikitabobko.github.io/AeroSpace/guide#on-window-detected-callbacks
 [[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
+if.app-id = 'com.brave.Browser'
 run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
@@ -207,8 +207,12 @@ if.app-id = 'dev.warp.Warp-Stable'
 run = "move-node-to-workspace 3"
 
 [[on-window-detected]]
-if.app-id = 'com.insomnia.app'
+if.app-id = 'com.jetbrains.datagrip'
 run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
+if.app-id = 'com.insomnia.app'
+run = "move-node-to-workspace 5"
 
 [[on-window-detected]]
 if.app-id = 'com.axosoft.gitkraken'
