@@ -5,7 +5,7 @@
 	"editor.guides.indentation": true,
 	"editor.bracketPairColorization.enabled": true,
 	"editor.copyWithSyntaxHighlighting": false,
-	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.ignoreTrimWhitespace": true,
 	"editor.emptySelectionClipboard": false,
 	"workbench.editor.enablePreview": false,
 	"window.newWindowDimensions": "inherit",
@@ -27,9 +27,8 @@
 	/**
 	 * Silence The Noise
 	 */
-	"breadcrumbs.enabled": false,
 	"scm.diffDecorations": "none",
-	"editor.hover.enabled": true,
+	"editor.hover.enabled": "on",
 	"editor.matchBrackets": "never",
 	"workbench.tips.enabled": true,
 	"editor.colorDecorators": false,
@@ -54,7 +53,7 @@
 	 * Typography
 	 **/
 	"workbench.preferredLightColorTheme": "Quiet Light",
-	"workbench.colorTheme": "GitHub Dark",
+	"workbench.colorTheme": "GitHub Light",
 	"editor.fontFamily": "Jetbrains Mono",
 	"editor.fontSize": 15,
 	"editor.lineHeight": 28,
@@ -79,6 +78,7 @@
 		"**/package-lock.json": true,
 		"**/yarn.lock": true,
 		"**/pnpm-lock.yaml": true,
+		"**/.wrangler": true,
 		"storage": true,
 		".phpunit.result.cache": true
 	},
@@ -118,14 +118,14 @@
 	/**
 	 * Prettier
 	 **/
-	"biome.configurationPath": ".config/biome.json",
+	// "biome.configurationPath": ".config/biome.json",
 	"[javascript]": {
 		"editor.defaultFormatter": "biomejs.biome",
 		"editor.formatOnSave": true,
 		"editor.tabSize": 2
 	},
 	"[json]": {
-		"editor.defaultFormatter": "biomejs.biome",
+		"editor.defaultFormatter": "vscode.json-language-features",
 		"editor.formatOnSave": true,
 		"editor.tabSize": 2
 	},
@@ -144,8 +144,22 @@
 		"editor.formatOnSave": true,
 		"editor.tabSize": 2
 	},
+	"[md]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true,
+		"editor.tabSize": 2
+	},
+	"[mdx]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": true,
+		"editor.tabSize": 2
+	},
 	"prettier.requireConfig": true,
 	"prettier.useEditorConfig": false,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports.biome": "explicit",
+		"source.fixAll.biome": "explicit"
+	},
 
 	/**
 	 * Window Settings
@@ -170,9 +184,20 @@
 		// Change cursor color.
 		".monaco-editor .cursor": "background: linear-gradient(to bottom, #7f00ff, #e100ff) !important; color: #292D3E !important"
 	},
-	"cSpell.userWords": ["Hasura", "modelcontextprotocol", "Streamable"],
-	"totalTypeScript.hideAllTips": false,
-	"totalTypeScript.hideBasicTips": false,
+	"cSpell.userWords": [
+		"ecommerce",
+		"Hasura",
+		"Laravel",
+		"modelcontextprotocol",
+		"Streamable"
+	],
 	"github.copilot.nextEditSuggestions.enabled": false,
-	"totalTypeScript.hiddenTips": ["ts-object-type"]
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"workbench.navigationControl.enabled": false,
+	"security.workspace.trust.untrustedFiles": "open",
+
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"explorer.confirmDelete": false,
+	"makefile.configureOnOpen": false,
+	"explorer.confirmDragAndDrop": false
 }
