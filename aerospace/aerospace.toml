@@ -215,8 +215,12 @@ if.app-id = 'com.insomnia.app'
 run = "move-node-to-workspace 5"
 
 [[on-window-detected]]
-if.app-id = 'com.axosoft.gitkraken'
+if.app-id = 'md.obsidian'
 run = "move-node-to-workspace 5"
+
+[[on-window-detected]]
+if.app-id = 'com.axosoft.gitkraken'
+run = "move-node-to-workspace 6"
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
