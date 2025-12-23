@@ -21,9 +21,9 @@
 # reloaded while running; some only apply to new windows and others may require
 # a full restart to take effect.
 
-working-directory = /Users/rob/Code
+working-directory = "/Users/rob/Code"
 
-theme = "Github Dark Dimmed"
+theme = "Atom One Dark"
 
 # Config syntax crash course
 # ==========================
@@ -57,9 +57,9 @@ window-padding-x = 5
 # resize-overlay-duration = 4s 200ms
 
 # https://ghostty.org/docs/config/reference#macos-option-as-alt
-macos-option-as-alt = true
+# macos-option-as-alt = true
 
 # There's an issue opening a new tab, it messes with aerospace
 # Will just force new tabs to open as windows instead
-keybind = super+t=new_window
-keybind = super+n=new_tab
+# keybind = super+t=new_window
+# keybind = super+n=new_tab
