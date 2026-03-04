@@ -2,7 +2,7 @@
 
 ```shell
 # Update Aerospace
-cp ~/.config/aerospace/ ./aerospace
+cp -R ~/.config/aerospace/ ./aerospace
 
 # Update Ghostty
 cp -R ~/.config/ghostty/config ./ghostty

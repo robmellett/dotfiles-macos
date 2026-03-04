@@ -23,7 +23,7 @@
 
 working-directory = "/Users/rob/Code"
 
-theme = "Atom One Dark"
+theme = "Dracula"
 
 # Config syntax crash course
 # ==========================
