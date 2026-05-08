@@ -1,41 +1,32 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
-
-  "theme": "light",
-
+  "env": {
+    "APP_ENV": "local"
+  },
+  "attribution": {},
   "permissions": {
     "allow": [
-      // ── Composer ──────────────────────────────────────────────────────────
       "Bash(composer install)",
       "Bash(composer update)",
       "Bash(composer require *)",
       "Bash(composer dump-autoload)",
       "Bash(composer run-script *)",
-
-      // ── Artisan ───────────────────────────────────────────────────────────
       "Bash(php artisan *)",
-
-      // ── PHP / Pest / PHPUnit ──────────────────────────────────────────────
       "Bash(php *)",
       "Bash(./vendor/bin/pest *)",
       "Bash(./vendor/bin/phpunit *)",
       "Bash(./vendor/bin/phpstan *)",
       "Bash(./vendor/bin/pint *)",
       "Bash(./vendor/bin/php-cs-fixer *)",
-
-      // ── Node / NPM (Vite, Tailwind, etc.) ─────────────────────────────────
+      "Bash(./vendor/bin/sail *)",
       "Bash(npm install)",
       "Bash(npm run *)",
-      "Bash(npx *)",
-
-      // ── Git (read-only operations) ─────────────────────────────────────────
+      "Bash(pnpm install)",
       "Bash(git status)",
       "Bash(git diff *)",
       "Bash(git log *)",
       "Bash(git show *)",
       "Bash(git branch *)",
-
-      // ── Read common project files ──────────────────────────────────────────
       "Read(./composer.json)",
       "Read(./composer.lock)",
       "Read(./package.json)",
@@ -44,46 +35,26 @@
       "Read(./pint.json)",
       "Read(./.php-cs-fixer.php)",
       "Read(./vite.config.js)",
-      "Read(./tailwind.config.js)"
-
-      // ── Utilities ──────────────────────────────────────
-      "Bash(find *)",
+      "Read(./tailwind.config.js)",
+      "Bash(find *)"
     ],
-
     "deny": [
-      // ── Protect secrets & environment files ───────────────────────────────
       "Read(./.env)",
       "Read(./.env.*)",
       "Read(./secrets/**)",
       "Read(./storage/app/private/**)",
-
-      // ── Block destructive DB commands ─────────────────────────────────────
       "Bash(php artisan db:wipe)",
       "Bash(php artisan migrate:fresh)",
       "Bash(php artisan migrate:reset)",
-
-      // ── Block dangerous shell operations ──────────────────────────────────
       "Bash(rm -rf *)",
       "Bash(sudo *)",
       "Bash(chmod *)",
       "Bash(chown *)",
       "Bash(find * -delete *)",
       "Bash(find * -exec rm *)",
-
-      // ── Block outbound network tools (use Http facade in tests instead) ───
       "Bash(curl *)",
       "Bash(wget *)"
     ]
   },
-
-  "env": {
-    // Keeps Telescope / Debugbar out of the way during artisan commands
-    "APP_ENV": "local"
-  },
-
-  // Attribution in commits (set false if you prefer clean history)
-  "attribution": {
-    "commits": false,
-    "pullRequests": false
-  }
+  "theme": "light"
 }

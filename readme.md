@@ -12,5 +12,4 @@ cp -R ~/.config/ghostty/config ./ghostty
 
 # Update Claude
 cp -R ~/.claude/settings.json ./claude
-cp -R ~/.claude/skills ./claude
 ```
