@@ -11,6 +11,7 @@
       "Bash(composer require *)",
       "Bash(composer dump-autoload)",
       "Bash(composer run-script *)",
+      "Bash(docker compose *)",
       "Bash(php artisan *)",
       "Bash(php *)",
       "Bash(./vendor/bin/pest *)",
@@ -19,6 +20,9 @@
       "Bash(./vendor/bin/pint *)",
       "Bash(./vendor/bin/php-cs-fixer *)",
       "Bash(./vendor/bin/sail *)",
+      "Bash(./vendor/bin/sail artisan *)",
+      "Bash(./vendor/bin/sail test *)",
+      "Bash(./vendor/bin/sail exec *)",
       "Bash(npm install)",
       "Bash(npm run *)",
       "Bash(pnpm install)",
@@ -27,6 +31,7 @@
       "Bash(git log *)",
       "Bash(git show *)",
       "Bash(git branch *)",
+      "Bash(ls *)",
       "Read(./composer.json)",
       "Read(./composer.lock)",
       "Read(./package.json)",
@@ -56,5 +61,16 @@
       "Bash(wget *)"
     ]
   },
-  "theme": "light"
+  "extraKnownMarketplaces": {
+    "phpstorm-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "jetbrains/phpstorm-claude-marketplace"
+      }
+    }
+  },
+  "theme": "light",
+  "enabledPlugins": {
+    "phpstorm-plugin@phpstorm-marketplace": true
+  }
 }
